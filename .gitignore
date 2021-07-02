@@ -1,0 +1,11 @@
+﻿*.sqlite
+*.suo
+*.log
+*.iso
+*.zip
+
+bin/
+obj/
+Properties/
+.vs/
+*.settings
