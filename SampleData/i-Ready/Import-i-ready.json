@@ -1,0 +1,1118 @@
+{
+    "Title": "i-Ready sample",
+    "Description": "i-Ready template sample",
+    "APIVersion": "5.0.0",
+    "Name": "Test User",
+    "Email": "user@mail.com",
+    "Organization": "Ed-Fi",
+    "Template": {
+  "Maps": [
+    {
+      "Name": "CA-IREADY_ELA",
+      "ResourcePath": "/ed-fi/studentAssessments",
+      "ColumnHeaders": [
+        "Last Name",
+        "First Name",
+        "Student ID",
+        "Student Grade",
+        "Academic Year",
+        "School",
+        "Start Date",
+        "Completion Date",
+        "Time on Task (minutes)",
+        "Rush Flag",
+        "Overall Scale Score",
+        "Overall Placement",
+        "Grouping",
+        "Lexile Measure",
+        "Lexile Range",
+        "Phonological Awareness Scale Score",
+        "Phonological Awareness Placement",
+        "Phonics Scale Score",
+        "Phonics Placement",
+        "High-Frequency Words Scale Score",
+        "High-Frequency Words Placement",
+        "Vocabulary Scale Score",
+        "Vocabulary Placement",
+        "Reading Comprehension: Literature Scale Score",
+        "Reading Comprehension: Literature Placement",
+        "Reading Comprehension: Informational Text Scale Score",
+        "Reading Comprehension: Informational Text Placement",
+        "Diagnostic Language",
+        "Annual Typical Growth Measure",
+        "Annual Stretch Growth Measure",
+        "Mid On Grade Level Scale Score",
+        "Activity Id"
+      ],
+      "Map": {
+        "studentAssessmentIdentifier": {
+          "Column": "Activity Id"
+        },
+        "assessmentReference": {
+          "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-ELA-V1",
+          "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+        },
+        "schoolYearTypeReference": {
+          "schoolYear": {
+            "Column": "Academic Year",
+            "Lookup": "CA-IREADY_SchoolYear"
+          }
+        },
+        "studentReference": {
+          "studentUniqueId": {
+            "Column": "Student ID"
+          }
+        },
+        "administrationDate": {
+          "Column": "Completion Date"
+        },
+        "performanceLevels": [
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Rush Flag",
+            "performanceLevelDescriptor": {
+              "Column": "Rush Flag",
+              "Lookup": "CA-IREADY_RushFlags"
+            },
+            "performanceLevelMet": true
+          }
+        ],
+        "scoreResults": [
+          {
+            "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+            "result": {
+              "Column": "Overall Scale Score"
+            }
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level",
+            "result": {
+              "Column": "Overall Placement"
+            }
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Lexile Measure",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level",
+            "result": {
+              "Column": "Lexile Measure"
+            }
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Lexile Range",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level",
+            "result": {
+              "Column": "Lexile Range"
+            }
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Time on Task (minutes)",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+            "result": {
+              "Column": "Time on Task (minutes)"
+            }
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Annual Typical Growth Measure",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+            "result": {
+              "Column": "Annual Typical Growth Measure"
+            }
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Annual Stretch Growth Measure",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+            "result": {
+              "Column": "Annual Stretch Growth Measure"
+            }
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Mid On Grade Level Scale Score",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+            "result": {
+              "Column": "Mid On Grade Level Scale Score"
+            }
+          }
+        ],
+        "studentObjectiveAssessments": [
+          {
+            "objectiveAssessmentReference": {
+              "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-ELA-V1",
+              "identificationCode": "CA-IREADY-DIAGNOSTIC-ELA-PHONOLOGICAL-AWARENESS",
+              "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+            },
+            "scoreResults": [
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+                "result": {
+                  "Column": "Phonological Awareness Scale Score"
+                }
+              },
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level",
+                "result": {
+                  "Column": "Phonological Awareness Placement"
+                }
+              }
+            ]
+          },
+          {
+            "objectiveAssessmentReference": {
+              "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-ELA-V1",
+              "identificationCode": "CA-IREADY-DIAGNOSTIC-ELA-PHONICS",
+              "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+            },
+            "scoreResults": [
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+                "result": {
+                  "Column": "Phonics Scale Score"
+                }
+              },
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level",
+                "result": {
+                  "Column": "Phonics Placement"
+                }
+              }
+            ]
+          },
+          {
+            "objectiveAssessmentReference": {
+              "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-ELA-V1",
+              "identificationCode": "CA-IREADY-DIAGNOSTIC-ELA-HIGH-FREQUENCY-WORDS",
+              "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+            },
+            "scoreResults": [
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+                "result": {
+                  "Column": "High-Frequency Words Scale Score"
+                }
+              },
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level",
+                "result": {
+                  "Column": "High-Frequency Words Placement"
+                }
+              }
+            ]
+          },
+          {
+            "objectiveAssessmentReference": {
+              "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-ELA-V1",
+              "identificationCode": "CA-IREADY-DIAGNOSTIC-ELA-VOCABULARY",
+              "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+            },
+            "scoreResults": [
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+                "result": {
+                  "Column": "Vocabulary Scale Score"
+                }
+              },
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level",
+                "result": {
+                  "Column": "Vocabulary Placement"
+                }
+              }
+            ]
+          },
+          {
+            "objectiveAssessmentReference": {
+              "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-ELA-V1",
+              "identificationCode": "CA-IREADY-DIAGNOSTIC-ELA-READING-COMP-LITERATURE",
+              "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+            },
+            "scoreResults": [
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+                "result": {
+                  "Column": "Reading Comprehension: Literature Scale Score"
+                }
+              },
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level",
+                "result": {
+                  "Column": "Reading Comprehension: Literature Placement"
+                }
+              }
+            ]
+          },
+          {
+            "objectiveAssessmentReference": {
+              "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-ELA-V1",
+              "identificationCode": "CA-IREADY-DIAGNOSTIC-ELA-READING-COMP-INFORMATION-TEXT",
+              "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+            },
+            "scoreResults": [
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+                "result": {
+                  "Column": "Reading Comprehension: Informational Text Scale Score"
+                }
+              },
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level",
+                "result": {
+                  "Column": "Reading Comprehension: Informational Text Placement"
+                }
+              }
+            ]
+          }
+        ],
+        "whenAssessedGradeLevelDescriptor": {
+          "Column": "Student Grade",
+          "Lookup": "CA-IREADY_AssessedGradeLevel"
+        }
+      }
+    },
+    {
+      "Name": "CA-IREADY_MATH",
+      "ResourcePath": "/ed-fi/studentAssessments",
+      "ColumnHeaders": [
+        "Last Name",
+        "First Name",
+        "Student ID",
+        "Student Grade",
+        "Academic Year",
+        "School",
+        "Start Date",
+        "Completion Date",
+        "Time on Task (minutes)",
+        "Rush Flag",
+        "Overall Scale Score",
+        "Overall Placement",
+        "Grouping",
+        "Quantile Measure",
+        "Quantile Range",
+        "Number and Operations Scale Score",
+        "Number and Operations Placement",
+        "Algebra and Algebraic Thinking Scale Score",
+        "Algebra and Algebraic Thinking Placement",
+        "Measurement and Data Scale Score",
+        "Measurement and Data Placement",
+        "Geometry Scale Score",
+        "Geometry Placement",
+        "Diagnostic Language",
+        "Annual Typical Growth Measure",
+        "Annual Stretch Growth Measure",
+        "Mid On Grade Level Scale Score",
+        "Activity Id"
+      ],
+      "Map": {
+        "studentAssessmentIdentifier": {
+          "Column": "Activity Id"
+        },
+        "assessmentReference": {
+          "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-MATH-V1",
+          "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+        },
+        "schoolYearTypeReference": {
+          "schoolYear": {
+            "Column": "Academic Year",
+            "Lookup": "CA-IREADY_SchoolYear"
+          }
+        },
+        "studentReference": {
+          "studentUniqueId": {
+            "Column": "Student ID"
+          }
+        },
+        "administrationDate": {
+          "Column": "Completion Date"
+        },
+        "performanceLevels": [
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Rush Flag",
+            "performanceLevelDescriptor": {
+              "Column": "Rush Flag",
+              "Lookup": "CA-IREADY_RushFlags"
+            },
+            "performanceLevelMet": true
+          }
+        ],
+        "scoreResults": [
+          {
+            "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+            "result": {
+              "Column": "Overall Scale Score"
+            }
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level",
+            "result": {
+              "Column": "Overall Placement"
+            }
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Quantile Measure",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level",
+            "result": {
+              "Column": "Quantile Measure"
+            }
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Quantile Range",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level",
+            "result": {
+              "Column": "Quantile Range"
+            }
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Time on Task (minutes)",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+            "result": {
+              "Column": "Time on Task (minutes)"
+            }
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Annual Typical Growth Measure",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+            "result": {
+              "Column": "Annual Typical Growth Measure"
+            }
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Annual Stretch Growth Measure",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+            "result": {
+              "Column": "Annual Stretch Growth Measure"
+            }
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Mid On Grade Level Scale Score",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+            "result": {
+              "Column": "Mid On Grade Level Scale Score"
+            }
+          }
+        ],
+        "studentObjectiveAssessments": [
+          {
+            "objectiveAssessmentReference": {
+              "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-MATH-V1",
+              "identificationCode": "CA-IREADY-DIAGNOSTIC-MATH-NUMBER-AND-OPERATIONS",
+              "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+            },
+            "scoreResults": [
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+                "result": {
+                  "Column": "Number and Operations Scale Score"
+                }
+              },
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level",
+                "result": {
+                  "Column": "Number and Operations Placement"
+                }
+              }
+            ]
+          },
+          {
+            "objectiveAssessmentReference": {
+              "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-MATH-V1",
+              "identificationCode": "CA-IREADY-DIAGNOSTIC-MATH-ALGEBRA",
+              "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+            },
+            "scoreResults": [
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+                "result": {
+                  "Column": "Algebra and Algebraic Thinking Scale Score"
+                }
+              },
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level",
+                "result": {
+                  "Column": "Algebra and Algebraic Thinking Placement"
+                }
+              }
+            ]
+          },
+          {
+            "objectiveAssessmentReference": {
+              "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-MATH-V1",
+              "identificationCode": "CA-IREADY-DIAGNOSTIC-MATH-MEASUREMENT",
+              "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+            },
+            "scoreResults": [
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+                "result": {
+                  "Column": "Measurement and Data Scale Score"
+                }
+              },
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level",
+                "result": {
+                  "Column": "Measurement and Data Placement"
+                }
+              }
+            ]
+          },
+          {
+            "objectiveAssessmentReference": {
+              "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-MATH-V1",
+              "identificationCode": "CA-IREADY-DIAGNOSTIC-MATH-GEOMETRY",
+              "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+            },
+            "scoreResults": [
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+                "result": {
+                  "Column": "Geometry Scale Score"
+                }
+              },
+              {
+                "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+                "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level",
+                "result": {
+                  "Column": "Geometry Placement"
+                }
+              }
+            ]
+          }
+        ],
+        "whenAssessedGradeLevelDescriptor": {
+          "Column": "Student Grade",
+          "Lookup": "CA-IREADY_AssessedGradeLevel"
+        }
+      }
+    }
+  ],
+  "Bootstraps": [
+    {
+      "Name": "CA-IREADY_ARMD",
+      "ResourcePath": "/ed-fi/assessmentReportingMethodDescriptors",
+      "Data": [
+        {
+          "codeValue": "Quantile Range",
+          "description": "Quantile Range",
+          "namespace": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor",
+          "shortDescription": "Quantile Range"
+        },
+        {
+          "codeValue": "Lexile Range",
+          "description": "Lexile Range",
+          "namespace": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor",
+          "shortDescription": "Lexile Range"
+        },
+        {
+          "codeValue": "Rush Flag",
+          "description": "Rush Flag",
+          "namespace": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor",
+          "shortDescription": "Rush Flag"
+        },
+        {
+          "codeValue": "Time on Task (minutes)",
+          "description": "Time on Task (minutes)",
+          "namespace": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor",
+          "shortDescription": "Time on Task (minutes)"
+        },
+        {
+          "codeValue": "Annual Typical Growth Measure",
+          "description": "Annual Typical Growth Measure",
+          "namespace": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor",
+          "shortDescription": "Annual Typical Growth Measure"
+        },
+        {
+          "codeValue": "Annual Stretch Growth Measure",
+          "description": "Annual Stretch Growth Measure",
+          "namespace": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor",
+          "shortDescription": "Annual Stretch Growth Measure"
+        },
+        {
+          "codeValue": "Mid On Grade Level Scale Score",
+          "description": "Mid On Grade Level Scale Score",
+          "namespace": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor",
+          "shortDescription": "Mid On Grade Level Scale Score"
+        }
+      ]
+    },
+    {
+      "Name": "CA-IREADY_PLD",
+      "ResourcePath": "/ed-fi/performanceLevelDescriptors",
+      "Data": [
+        {
+          "codeValue": "Yellow Rush Flag",
+          "description": "Yellow Rush Flag",
+          "namespace": "uri://www.curriculumassociates.com/products/i-ready/PerformanceLevelDescriptor",
+          "shortDescription": "Yellow Rush Flag"
+        },
+        {
+          "codeValue": "Red Rush Flag",
+          "description": "Red Rush Flag",
+          "namespace": "uri://www.curriculumassociates.com/products/i-ready/PerformanceLevelDescriptor",
+          "shortDescription": "Red Rush Flag"
+        }
+      ]
+    },
+    {
+      "Name": "CA-IREADY_Assessment_MATH",
+      "ResourcePath": "/ed-fi/assessments",
+      "Data": {
+        "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-MATH-V1",
+        "assessmentTitle": "Curriculum Associates i-Ready Math Diagnostic",
+        "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml",
+        "assessedGradeLevels": [
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Kindergarten"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#First grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Second grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Third grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Fourth grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Fifth grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Sixth grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Seventh grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Eighth grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Ninth grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Tenth grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Eleventh grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Twelfth grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Ungraded"
+          }
+        ],
+        "assessmentCategoryDescriptor": "uri://ed-fi.org/AssessmentCategoryDescriptor#Diagnostic",
+        "academicSubjects": [
+          {
+            "academicSubjectDescriptor": "uri://ed-fi.org/AcademicSubjectDescriptor#Mathematics"
+          }
+        ],
+        "scores": [
+          {
+            "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+            "maximumScore": "800",
+            "minimumScore": "0"
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Quantile Measure",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Quantile Range",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Range"
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Time on Task (minutes)",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Annual Typical Growth Measure",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Annual Stretch Growth Measure",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Mid On Grade Level Scale Score",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+          }
+        ],
+        "performanceLevels": [
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Rush Flag",
+            "performanceLevelDescriptor": "uri://www.curriculumassociates.com/products/i-ready/PerformanceLevelDescriptor#Yellow Rush Flag",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Rush Flag",
+            "performanceLevelDescriptor": "uri://www.curriculumassociates.com/products/i-ready/PerformanceLevelDescriptor#Red Rush Flag",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "CA-IREADY_Assessment_ELA",
+      "ResourcePath": "/ed-fi/assessments",
+      "Data": {
+        "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-ELA-V1",
+        "assessmentTitle": "Curriculum Associates i-Ready ELA Diagnostic",
+        "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml",
+        "assessedGradeLevels": [
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Kindergarten"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#First grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Second grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Third grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Fourth grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Fifth grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Sixth grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Seventh grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Eighth grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Ninth grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Tenth grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Eleventh grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Twelfth grade"
+          },
+          {
+            "gradeLevelDescriptor": "uri://ed-fi.org/GradeLevelDescriptor#Ungraded"
+          }
+        ],
+        "assessmentCategoryDescriptor": "uri://ed-fi.org/AssessmentCategoryDescriptor#Diagnostic",
+        "academicSubjects": [
+          {
+            "academicSubjectDescriptor": "uri://ed-fi.org/AcademicSubjectDescriptor#English Language Arts"
+          }
+        ],
+        "scores": [
+          {
+            "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer",
+            "maximumScore": "800",
+            "minimumScore": "0"
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Lexile Measure",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Lexile Range",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Range"
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Time on Task (minutes)",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Annual Typical Growth Measure",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Annual Stretch Growth Measure",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Mid On Grade Level Scale Score",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+          }
+        ],
+        "performanceLevels": [
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Rush Flag",
+            "performanceLevelDescriptor": "uri://www.curriculumassociates.com/products/i-ready/PerformanceLevelDescriptor#Yellow Rush Flag",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+          },
+          {
+            "assessmentReportingMethodDescriptor": "uri://www.curriculumassociates.com/products/i-ready/AssessmentReportingMethodDescriptor#Rush Flag",
+            "performanceLevelDescriptor": "uri://www.curriculumassociates.com/products/i-ready/PerformanceLevelDescriptor#Red Rush Flag",
+            "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+          }
+        ]
+      }
+    },
+    {
+      "Name": "CA-IREADY_ObjectiveAssessments",
+      "ResourcePath": "/ed-fi/objectiveAssessments",
+      "Data": [
+        {
+          "identificationCode": "CA-IREADY-DIAGNOSTIC-MATH-NUMBER-AND-OPERATIONS",
+          "assessmentReference": {
+            "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-MATH-V1",
+            "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+          },
+          "description": "Mathematics - Number and Operations",
+          "scores": [
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+            },
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+            }
+          ]
+        },
+        {
+          "identificationCode": "CA-IREADY-DIAGNOSTIC-MATH-ALGEBRA",
+          "assessmentReference": {
+            "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-MATH-V1",
+            "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+          },
+          "description": "Mathematics - Algebra and Algebraic Thinking",
+          "scores": [
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+            },
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+            }
+          ]
+        },
+        {
+          "identificationCode": "CA-IREADY-DIAGNOSTIC-MATH-MEASUREMENT",
+          "assessmentReference": {
+            "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-MATH-V1",
+            "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+          },
+          "description": "Mathematics - Measurement and Data",
+          "scores": [
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+            },
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+            }
+          ]
+        },
+        {
+          "identificationCode": "CA-IREADY-DIAGNOSTIC-MATH-GEOMETRY",
+          "assessmentReference": {
+            "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-MATH-V1",
+            "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+          },
+          "description": "Mathematics - Geometry",
+          "scores": [
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+            },
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+            }
+          ]
+        },
+        {
+          "identificationCode": "CA-IREADY-DIAGNOSTIC-ELA-PHONOLOGICAL-AWARENESS",
+          "assessmentReference": {
+            "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-ELA-V1",
+            "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+          },
+          "description": "ELA - Phonological Awareness",
+          "scores": [
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+            },
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+            }
+          ]
+        },
+        {
+          "identificationCode": "CA-IREADY-DIAGNOSTIC-ELA-PHONICS",
+          "assessmentReference": {
+            "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-ELA-V1",
+            "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+          },
+          "description": "ELA - Phonics",
+          "scores": [
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+            },
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+            }
+          ]
+        },
+        {
+          "identificationCode": "CA-IREADY-DIAGNOSTIC-ELA-HIGH-FREQUENCY-WORDS",
+          "assessmentReference": {
+            "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-ELA-V1",
+            "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+          },
+          "description": "ELA - High-Frequency Words",
+          "scores": [
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+            },
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+            }
+          ]
+        },
+        {
+          "identificationCode": "CA-IREADY-DIAGNOSTIC-ELA-VOCABULARY",
+          "assessmentReference": {
+            "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-ELA-V1",
+            "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+          },
+          "description": "ELA - Vocabulary",
+          "scores": [
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+            },
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+            }
+          ]
+        },
+        {
+          "identificationCode": "CA-IREADY-DIAGNOSTIC-ELA-READING-COMP-LITERATURE",
+          "assessmentReference": {
+            "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-ELA-V1",
+            "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+          },
+          "description": "ELA - Reading Comprehension: Literature",
+          "scores": [
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+            },
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+            }
+          ]
+        },
+        {
+          "identificationCode": "CA-IREADY-DIAGNOSTIC-ELA-READING-COMP-INFORMATION-TEXT",
+          "assessmentReference": {
+            "assessmentIdentifier": "CA-IREADY-DIAGNOSTIC-ELA-V1",
+            "namespace": "uri://www.curriculumassociates.com/products/i-ready/Assessment/Assessment.xml"
+          },
+          "description": "ELA - Reading Comprehension: Informational Text",
+          "scores": [
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Scale score",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Integer"
+            },
+            {
+              "assessmentReportingMethodDescriptor": "uri://ed-fi.org/AssessmentReportingMethodDescriptor#Proficiency level",
+              "resultDatatypeTypeDescriptor": "uri://ed-fi.org/ResultDatatypeTypeDescriptor#Level"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Lookups": [
+    {
+      "SourceTable": "CA-IREADY_AssessedGradeLevel",
+      "Key": "1",
+      "Value": "uri://ed-fi.org/GradeLevelDescriptor#First grade"
+    },
+    {
+      "SourceTable": "CA-IREADY_AssessedGradeLevel",
+      "Key": "10",
+      "Value": "uri://ed-fi.org/GradeLevelDescriptor#Tenth grade"
+    },
+    {
+      "SourceTable": "CA-IREADY_AssessedGradeLevel",
+      "Key": "11",
+      "Value": "uri://ed-fi.org/GradeLevelDescriptor#Eleventh grade"
+    },
+    {
+      "SourceTable": "CA-IREADY_AssessedGradeLevel",
+      "Key": "12",
+      "Value": "uri://ed-fi.org/GradeLevelDescriptor#Twelfth grade"
+    },
+    {
+      "SourceTable": "CA-IREADY_AssessedGradeLevel",
+      "Key": "2",
+      "Value": "uri://ed-fi.org/GradeLevelDescriptor#Second grade"
+    },
+    {
+      "SourceTable": "CA-IREADY_AssessedGradeLevel",
+      "Key": "3",
+      "Value": "uri://ed-fi.org/GradeLevelDescriptor#Third grade"
+    },
+    {
+      "SourceTable": "CA-IREADY_AssessedGradeLevel",
+      "Key": "4",
+      "Value": "uri://ed-fi.org/GradeLevelDescriptor#Fourth grade"
+    },
+    {
+      "SourceTable": "CA-IREADY_AssessedGradeLevel",
+      "Key": "5",
+      "Value": "uri://ed-fi.org/GradeLevelDescriptor#Fifth grade"
+    },
+    {
+      "SourceTable": "CA-IREADY_AssessedGradeLevel",
+      "Key": "6",
+      "Value": "uri://ed-fi.org/GradeLevelDescriptor#Sixth grade"
+    },
+    {
+      "SourceTable": "CA-IREADY_AssessedGradeLevel",
+      "Key": "7",
+      "Value": "uri://ed-fi.org/GradeLevelDescriptor#Seventh grade"
+    },
+    {
+      "SourceTable": "CA-IREADY_AssessedGradeLevel",
+      "Key": "8",
+      "Value": "uri://ed-fi.org/GradeLevelDescriptor#Eighth grade"
+    },
+    {
+      "SourceTable": "CA-IREADY_AssessedGradeLevel",
+      "Key": "9",
+      "Value": "uri://ed-fi.org/GradeLevelDescriptor#Ninth grade"
+    },
+    {
+      "SourceTable": "CA-IREADY_AssessedGradeLevel",
+      "Key": "K",
+      "Value": "uri://ed-fi.org/GradeLevelDescriptor#Kindergarten"
+    },
+    {
+      "SourceTable": "CA-IREADY_RushFlags",
+      "Key": "Red Rush Flag",
+      "Value": "uri://www.curriculumassociates.com/products/i-ready/PerformanceLevelDescriptor#Red Rush Flag"
+    },
+    {
+      "SourceTable": "CA-IREADY_RushFlags",
+      "Key": "Yellow Rush Flag",
+      "Value": "uri://www.curriculumassociates.com/products/i-ready/PerformanceLevelDescriptor#Yellow Rush Flag"
+    },
+    {
+      "SourceTable": "CA-IREADY_SchoolYear",
+      "Key": "2017-2018",
+      "Value": "2018"
+    },
+    {
+      "SourceTable": "CA-IREADY_SchoolYear",
+      "Key": "2018-2019",
+      "Value": "2019"
+    },
+    {
+      "SourceTable": "CA-IREADY_SchoolYear",
+      "Key": "2019-2020",
+      "Value": "2020"
+    },
+    {
+      "SourceTable": "CA-IREADY_SchoolYear",
+      "Key": "2020-2021",
+      "Value": "2021"
+    },
+    {
+      "SourceTable": "CA-IREADY_SchoolYear",
+      "Key": "2021-2022",
+      "Value": "2022"
+    },
+    {
+      "SourceTable": "CA-IREADY_SchoolYear",
+      "Key": "2022-2023",
+      "Value": "2023"
+    },
+    {
+      "SourceTable": "CA-IREADY_SchoolYear",
+      "Key": "2023-2024",
+      "Value": "2024"
+    },
+    {
+      "SourceTable": "CA-IREADY_SchoolYear",
+      "Key": "2024-2025",
+      "Value": "2025"
+    },
+    {
+      "SourceTable": "CA-IREADY_SchoolYear",
+      "Key": "2025-2026",
+      "Value": "2026"
+    },
+    {
+      "SourceTable": "CA-IREADY_SchoolYear",
+      "Key": "2026-2027",
+      "Value": "2027"
+    },
+    {
+      "SourceTable": "CA-IREADY_SchoolYear",
+      "Key": "2027-2028",
+      "Value": "2028"
+    },
+    {
+      "SourceTable": "CA-IREADY_SchoolYear",
+      "Key": "2028-2029",
+      "Value": "2029"
+    },
+    {
+      "SourceTable": "CA-IREADY_SchoolYear",
+      "Key": "2029-2030",
+      "Value": "2030"
+    }
+  ]
+}
+}
