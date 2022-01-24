@@ -10,11 +10,6 @@ for reporting on Assessments broken out by Students, Schools, Staff, and Trends.
 - Local EdFI ODS database
 - Power BI Desktop
 
-## First time setup
-
-Run the `Assessments Script.sql` script on your local ODS database to create the needed
-views for this report.
-
 ## Legal Information
 
 Copyright (c) 2021 Ed-Fi Alliance, LLC and contributors.
