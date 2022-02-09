@@ -3,13 +3,13 @@
 -- The Ed-Fi Alliance licenses this file to you under the Apache License, Version 2.0.
 -- See the LICENSE and NOTICES files in the project root for more information.
 -- Set Last StaffSectionAssociation.EndDate=null for each Staff-Section.
-MERGE EdFi_Ods.edfi.StaffSectionAssociation AS target
+MERGE edfi.StaffSectionAssociation AS target
 USING (
 	SELECT ID
-	FROM EdFi_Ods.edfi.StaffSectionAssociation a
+	FROM edfi.StaffSectionAssociation a
 	WHERE ID IN (
 			SELECT TOP 1 id
-			FROM EdFi_Ods.edfi.StaffSectionAssociation b
+			FROM edfi.StaffSectionAssociation b
 			WHERE a.StaffUSI = b.StaffUSI
 				AND a.LocalCourseCode = b.LocalCourseCode
 				AND a.SchoolId = b.SchoolId
